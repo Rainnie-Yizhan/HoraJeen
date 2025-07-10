@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #fdf2ff;
+    }
+
+    .register-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      color: #9a2de2;
+      margin-left: 10px;
+    }
+
+    .register-btn {
+      background-color: #9a2de2;
+      color: white;
+      border: none;
+    }
+
+    .register-btn:hover {
+      background-color: #7d1fb3;
+    }
+
+    .login-link a {
+      color: #9a2de2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="d-flex align-items-center justify-content-center mb-4">
+      <div class="logo d-flex align-items-center">
+        <img src="image/logo.png.png" alt="Logo" />
+        <h1>Dudaung Jeen</h1>
+      </div>
+    </header>
+
+    <div class="register-container">
+      <h2 class="text-center mb-4">ลงทะเบียน</h2>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email" required />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" />
+          </div>
+          <div class="col-md-6">
+            <input type="password" class="form-control" placeholder="รหัสผ่าน" required />
+          </div>
+          <div class="col-md-6">
+            <input type="password" class="form-control" placeholder="ยืนยันรหัสผ่าน" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="ชื่อจริง" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="นามสกุล" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="วัน/เดือน/ปี ที่เกิด" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="เวลาเกิด*ตามสูติบัตร" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="สถานที่เกิด" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="เพศ" />
+          </div>
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="btn register-btn w-100">Register</button>
+        </div>
+        <p class="login-link text-center mt-3">
+          คุณมีชื่อผู้ใช้แล้วใช่หรือไม่ ? <a href="login.html">ลงชื่อเข้าใช้งาน</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

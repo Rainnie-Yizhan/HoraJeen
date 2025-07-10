@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+  <title>Document</title>
+</head>
+<body>
+<!-- 🔽 คัดลอก Navbar จาก homepage.html มาไว้ด้านบนสุดของ <body> -->
+<nav class="navbar navbar-expand-lg" style="background-color:#9a2de2; padding: 1rem;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span style="color: #dda400; font-weight: bold; font-size: 24px;">DuDuangJeen</span></a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="duduang.html">ดูดวง</a></li>
+        <li class="nav-item"><a class="nav-link" href="sinsae.html">ซินแส</a></li>
+        <li class="nav-item"><a class="nav-link" href="partner.html">พาร์ทเนอร์</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">สมัครสมาชิก</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="login.html">ลงชื่อเข้าใช้งาน</a></li>
+            <li><a class="dropdown-item" href="register.html">ลงทะเบียน</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  body{
+    background: -webkit-linear-gradient(left, #e776f4, #ffe97c);
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #9a2de2;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+.element-result {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fef9f4;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.element-result h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #9a2de2;
+}
+
+.element-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.element-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.element-info h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.element-info p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+.life-graph-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ขยับรูปกราฟชีวิตขึ้น 105px */
+#life-graph {
+  width: 100%;
+  filter: blur(8px); /* เบลอไว้ก่อน */
+  margin-top: -95px;
+}
+
+.lock-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-cover .lock-icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+.graph-life h4 {
+  margin-top: -105px;
+}
+</style>
+
+<div class="container emp-profile">
+  <form method="post">
+    <div class="row">
+      <div class="col-md-4 col-12">
+        <div class="profile-img">
+          <img src="image/profile.png" alt="profile" class="img-fluid" />
+          <div class="file btn btn-lg btn-primary">
+            Change Photo
+            <input type="file" name="file" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-12">
+        <div class="profile-head">
+          <h5>ชื่อ - นามสกุล</h5>
+          <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">ข้อมูลส่วนตัว</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                aria-controls="profile" aria-selected="false">กราฟชีวิต</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-12 text-center mt-3">
+        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- ซ้าย: พื้นดวง -->
+      <div class="col-md-4 col-12">
+        <div class="profile-work">
+          <p>พื้นดวงเบื้องต้น</p>
+          <div class="element-result">
+            <a href="">ธาตุประจำตัว</a><br />
+            <div class="element-box">
+              <img src="image/Fire-Element.jpg" alt="ธาตุไฟ" class="img-fluid" />
+              <div class="element-info">
+                <h6>ธาตุประจำตัว: ธาตุไฟ</h6>
+              </div>
+            </div>
+
+            <a href="">สีมงคลประจำธาตุ</a><br />
+            <div class="element-box">
+              <div class="element-info">
+                <p><strong>สีมงคล:</strong> แดง, ส้ม, ชมพู</p>
+              </div>
+            </div>
+
+            <a href="">เลขมงคลประจำธาตุ</a>
+            <div class="element-box">
+              <div class="element-info">
+                <p><strong>เลขมงคล:</strong> 3, 9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ขวา: แท็บเนื้อหา -->
+      <div class="col-md-8 col-12">
+        <div class="tab-content profile-tab" id="myTabContent">
+          <!-- แท็บข้อมูลส่วนตัว -->
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+              <div class="col-md-6 col-6">
+                <label>ชื่อผู้ใช้</label>
+              </div>
+              <div class="col-md-6 col-6">
+                <p>-------</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-6">
+                <label>วัน/เดือน/ปี ที่เกิด</label>
+              </div>
+              <div class="col-md-6 col-6">
+                <p>00/00/0000</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-6">
+                <label>เวลาที่เกิด * ตามสูติบัตร</label>
+              </div>
+              <div class="col-md-6 col-6">
+                <p>{{ birth_time }}</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-6">
+                <label>Email</label>
+              </div>
+              <div class="col-md-6 col-6">
+                <p>DudaungJeen@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-6">
+                <label>Phone</label>
+              </div>
+              <div class="col-md-6 col-6">
+                <p>123 456 7890</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-6">
+                <label>สถานที่เกิด</label>
+              </div>
+              <div class="col-md-6 col-6">
+                <p>---------------</p>
+              </div>
+            </div>
+          </div>
+
+              <!-- แท็บกราฟชีวิต (ใส่ได้ภายหลังตามระบบคำนวณ) -->
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="life-graph-wrapper">
+              <div id="locked-overlay" class="lock-cover">
+                <img src="image/lock-icon.png" alt="ล็อก" class="lock-icon" />
+                <p>กรุณาเติมเครดิตเพื่อดูกราฟชีวิตของคุณ</p>
+              </div>
+              <img id="life-graph" src="image/life graph.jpg" alt="กราฟชีวิต">
+            </div>
+            
+          </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+        <!-- Bootstrap JS (dropdown needs this) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
