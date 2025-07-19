@@ -1,15 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DuDuangJeen</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- ฟอนต์ Kalam ตาม CSS เดิม -->
-  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f4ecff;
+      padding-top: 80px;
+    }
+
+    .navbar .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .navbar .nav-link:hover {
+      color: #fdd835 !important;
+    }
+
+    .card {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn-chat {
+      background-color: #9a2de2;
+      color: white;
+      font-weight: bold;
+    }
+
+    .btn-chat:hover {
+      background-color: #7d21b8;
+      color: #fff;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>ซินแส</h1>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color:#9a2de2; padding: 1rem;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span
+          style="color: #dda400; font-weight: bold; font-size: 24px;">DuDuangJeen</span></a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">ดูดวง</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ซินแส</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">พาร์ทเนอร์</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">สมัครสมาชิก</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">ลงชื่อเข้าใช้งาน</a></li>
+              <li><a class="dropdown-item" href="#">ลงทะเบียน</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row g-4">
+      <!-- Card หมอดู -->
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+          <div class="card-body">
+            <h5 class="card-title text-primary">อ.พรรณษณัท</h5>
+            <p class="text-warning">รหัส 220</p>
+            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
+            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <button class="btn btn-chat w-100">แชท</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+          <div class="card-body">
+            <h5 class="card-title text-primary">อ.อรรถพล</h5>
+            <p class="text-warning">รหัส 220</p>
+            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
+            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <button class="btn btn-chat w-100">แชท</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+          <div class="card-body">
+            <h5 class="card-title text-primary">อ.วิเวก</h5>
+            <p class="text-warning">รหัส 220</p>
+            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
+            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <button class="btn btn-chat w-100">แชท</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+          <div class="card-body">
+            <h5 class="card-title text-primary">อ.นิริสา</h5>
+            <p class="text-warning">รหัส 220</p>
+            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
+            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <button class="btn btn-chat w-100">แชท</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+          <div class="card-body">
+            <h5 class="card-title text-primary">อ.วิเวียน</h5>
+            <p class="text-warning">รหัส 220</p>
+            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
+            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
+          </div>
+          <div class="card-footer bg-transparent">
+            <button class="btn btn-chat w-100">แชท</button>
+          </div>
+        </div>
+      </div>
+      <!-- เพิ่มการ์ดอื่นๆ เหมือนกันเปลี่ยนแค่ข้อมูล -->
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
