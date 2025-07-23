@@ -1,30 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>เข้าสู่ระบบด้วย LINE</title>
+  <title>โปรไฟล์ของคุณ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    img { border-radius: 50%; width: 100px; }
+    body {
+      font-family: "Sarabun", sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #003366);
+      color: #ffd700;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+
+    .card {
+      background: #ffffff10;
+      border: 2px solid #ffd70044;
+      border-radius: 15px;
+      padding: 30px 20px;
+      max-width: 350px;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #ffd700;
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .id {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
-  <h2>ยินดีต้อนรับ</h2>
-  <div id="profile">
+  <h1>โปรไฟล์ LINE ของคุณ</h1>
+
+  <div id="profile" class="card">
     <p>กำลังโหลดข้อมูลจาก LINE...</p>
   </div>
-
-  <form action="save.php" method="POST">
-    <input type="hidden" name="userId" id="userId">
-    <input type="hidden" name="displayName" id="displayName">
-    <input type="hidden" name="pictureUrl" id="pictureUrl">
-
-    <p><label>วันเกิด: <input type="date" name="birthday" required></label></p>
-
-    <p><button type="submit">ถัดไป</button></p>
-  </form>
 
   <script>
     async function main() {
@@ -37,14 +68,10 @@
 
       const profile = await liff.getProfile();
 
-      document.getElementById('userId').value = profile.userId;
-      document.getElementById('displayName').value = profile.displayName;
-      document.getElementById('pictureUrl').value = profile.pictureUrl;
-
       document.getElementById('profile').innerHTML = `
-        <img src="${profile.pictureUrl}"><br>
-        <strong>${profile.displayName}</strong><br>
-        <small>${profile.userId}</small>
+        <img src="${profile.pictureUrl}" alt="รูปโปรไฟล์">
+        <div class="name">${profile.displayName}</div>
+        <div class="id">${profile.userId}</div>
       `;
     }
 
