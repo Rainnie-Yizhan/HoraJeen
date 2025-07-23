@@ -1,326 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Homepage</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- ฟอนต์ Kalam ตาม CSS เดิม -->
-  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าแรก - DuDuangJeen</title>
   <style>
-    /* วาง CSS ที่คุณให้มาทั้งหมดไว้ตรงนี้ */
-    @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap'); 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Kalam', cursive;
-    }
     body {
-      background: white;
-      overflow-x: hidden;
-      font-family: 'Kalam', cursive;
-    }
-    .container {
-      position: relative;
-      width: 100vw;
       margin: 0;
-      padding: 0;
-      border: none;
-      background: white;
+      font-family: 'Sarabun', sans-serif;
+      background-color: #ffffff;
+      color: #333;
     }
-
-    /* Header Navbar */
-    .navbar-brand span {
-      color: #dda400;
+    header {
+      padding: 20px;
+      text-align: center;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 18px;
+      border-bottom: 1px solid #ddd;
     }
-
-    .navbar {
-      background-color:#9a2de2;
-      padding: 1rem;
+    .logo {
+      width: 140px;
+      margin: 0 auto 10px;
     }
-
-    .navbar-nav .nav-link {
-      color: white !important;
+    .banner img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      padding: 0 16px;
+      font-weight: bold;
       font-size: 16px;
-      padding-right: 15px;
+      margin-bottom: 10px;
     }
-
-    .navbar-nav .dropdown-menu {
-      background-color: #444;
+    .categories, .gift-section, .fortune-section {
+      padding: 0 16px;
+      margin-bottom: 24px;
     }
-
-    .navbar-nav .dropdown-item {
-      color: white;
-    }
-
-    .navbar-nav .dropdown-item:hover {
-      background-color: #666;
-    }
-
-    /* Service Cards */
-    .service-section {
+    .categories-grid {
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 60px 30px;
-      background: #f6f8fd;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .category {
+      flex: 1 1 28%;
+      text-align: center;
+    }
+    .category img {
+      width: 48px;
+      height: 48px;
+    }
+    .gift-box {
+      background: linear-gradient(to right, #f9c5d1, #fbc2eb);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 14px;
+      color: #551a8b;
+    }
+    .fortune-grid {
+      display: flex;
+      gap: 10px;
       flex-wrap: wrap;
     }
-
-    .card {
-      background: white;
+    .fortune-card {
+      flex: 1;
+      min-width: 45%;
+      background-color: #eee;
       border-radius: 12px;
-      box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      width: 300px;
-      position: relative;
-      text-align: center;
-      padding-bottom: 20px;
-      transition: transform 0.3s ease;
     }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
+    .fortune-card img {
       width: 100%;
-      height: 200px;
-      object-fit: cover;
     }
-
-    .icon-tag {
-  background: #f7a503;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 140px;         /* ปรับให้วางทับช่วงล่างของภาพ */
-  left: 20px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  z-index: 2;
-}
-
-.icon-tag img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-    .card h3 {
-      margin-top: 50px;
-      font-size: 18px;
-      color: #2b2d42;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #555;
-      margin: 15px 20px;
-    }
-
-    .card button {
-      background: #4e5c79;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+    .fortune-card p {
+      margin: 8px;
       font-weight: bold;
     }
-    .hero-slide {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-content {
-  text-align: center;
-  color: white;
-  padding: 0 20px;
-  max-width: 800px;
-}
-
-.hero-content h1 {
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1.3;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.hero-content p {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn-hero {
-  background: white;
-  color: #333;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.btn-hero:hover {
-  background: #ddd;
-}
-
-.btn-hero.outline {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-}
-
-.btn-hero.outline:hover {
-  background: white;
-  color: #000;
-}
-
+    nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: white;
+      border-top: 1px solid #ccc;
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 0;
+    }
+    nav img {
+      width: 24px;
+      opacity: 0.6;
+    }
+    nav img.active {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <img class="logo" src="vassanas-logo.png" alt="Vassanas Logo">
+    <div>Vassanas</div>
+  </header>
 
-<!-- ✅ Bootstrap Header / Navbar -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><span>DuDuangJeen</span></a>
-    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">HOME</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">ดูดวงรายวัน</a></li>
-            <li><a class="dropdown-item" href="#">ดูดวงรายอาทิตย์</a></li>
-            <li><a class="dropdown-item" href="#">ดูดวงรายเดือน</a></li>
-          </ul>
-        </li>--> 
-        <!---<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">ABOUT</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Team</a></li>
-            <li><a class="dropdown-item" href="#">Company</a></li>
-          </ul>
-        </li>-->
-        <!--<li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>-->
-        
-        <li class="nav-item"><a class="nav-link" href="duduang.html">ดูดวง</a></li>
-        <li class="nav-item"><a class="nav-link" href="sinsae.html">ซินแส</a></li>
-        <li class="nav-item"><a class="nav-link" href="partner.html">พาร์ทเนอร์</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">สมัครสมาชิก</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="login.html">ลงชื่อเข้าใช้งาน</a></li>
-            <li><a class="dropdown-item" href="register.html">ลงทะเบียน</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+  <div class="banner">
+    <img src="banner1.jpg" alt="Find My Way">
+    <img src="banner2.jpg" alt="Love Journey">
   </div>
-</nav>
-<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-  <div class="carousel-inner">
 
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <div class="hero-slide" style="background-image: url('image/Ancient.jpeg')">
-        <div class="hero-overlay">
-          <div class="hero-content">
-            <h1>WE MAKE STRONGEST <br>SERVICE ABOVE THE WORLD</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            <div class="hero-buttons">
-              <a href="#" class="btn-hero">OUR SERVICE</a>
-              <a href="#" class="btn-hero outline">GET A QUOTE</a>
-            </div>
-          </div>
-        </div>
+  <div class="section-title">หมวดหมู่แนะนำ</div>
+  <div class="categories">
+    <div class="categories-grid">
+      <div class="category">
+        <img src="icon-china.png"><div>พื้นดวงจีน</div>
+      </div>
+      <div class="category">
+        <img src="icon-love.png"><div>ความรัก</div>
+      </div>
+      <div class="category">
+        <img src="icon-calendar.png"><div>ดวงรายเดือน</div>
+      </div>
+      <div class="category">
+        <img src="icon-life.png"><div>ชะตาทั้งชีวิต</div>
+      </div>
+      <div class="category">
+        <img src="icon-biz.png"><div>ธุรกิจ</div>
+      </div>
+      <div class="category">
+        <img src="icon-thai.png"><div>พื้นดวงไทย</div>
       </div>
     </div>
+  </div>
 
-    <!-- Slide 2 -->
-    <div class="carousel-item">
-      <div class="hero-slide" style="background-image: url('image/Bazi.jpg');">
-        <div class="hero-overlay">
-          <div class="hero-content">
-            <h1>FASTEST LOGISTICS <br>ACROSS THE SKY</h1>
-            <p>Delivering your promise around the world, with speed, care, and excellence.</p>
-            <div class="hero-buttons">
-              <a href="#" class="btn-hero">LEARN MORE</a>
-              <a href="#" class="btn-hero outline">CONTACT US</a>
-            </div>
-          </div>
-        </div>
+  <div class="section-title">ของขวัญสำหรับลูกค้าใหม่</div>
+  <div class="gift-section">
+    <div class="gift-box">
+      <strong>กติกาการรับของรางวัล</strong><br>
+      เลือกเรื่องที่สนใจจะเช็กดวงได้เพียง 1 เรื่อง<br>
+      ชำระ 1 Coin เพื่อบริจาคให้กับมูลนิธิฯ ได้ทั้งเช็กดวง ได้ทั้งอิ่มบุญ
+    </div>
+  </div>
+
+  <div class="section-title">เช็กดวงไทย–จีน</div>
+  <div class="fortune-section">
+    <div class="fortune-grid">
+      <div class="fortune-card">
+        <img src="card-china.jpg" alt="โหราศาสตร์จีน">
+        <p>เช็กฟรี: โหราศาสตร์จีน</p>
+      </div>
+      <div class="fortune-card">
+        <img src="card-thai.jpg" alt="โหราศาสตร์ไทย">
+        <p>เช็กฟรี: โหราศาสตร์ไทย</p>
       </div>
     </div>
-
   </div>
 
-  <!-- Navigation arrows -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  </button>
-</div>
-
-
-<!-- ✅ Section with Cards -->
-<div class="service-section">
-  <div class="card">
-    <img src="image/element.jpg" alt="Ocean Freight">
-    <div class="icon-tag"><img src="image/elementt.jpg" alt="Element"></div>
-    <h3>ธาตุในศาสตร์จีน</h3>
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-    <button>Read More</button>
-  </div>
-
-  <div class="card">
-    <img src="image/Horasas.jpg" alt="Air Freight">
-    <div class="icon-tag"><img src="image/Horasass.png" alt="Horasas"></div>
-    <h3>โหราศาสตร์</h3>
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-    <button>Read More</button>
-  </div>
-
-  <div class="card">
-    <img src="image/Huangjui.jpg" alt="Street Freight">
-    <div class="icon-tag"><img src="image/Huangjuii.png" alt="Huangjui"></div>
-    <h3>ฮวงจุ้ย</h3>
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout..</p>
-    <button>Read More</button>
-  </div>
-</div>
-
-<!-- Bootstrap JS (dropdown needs this) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <nav>
+    <img src="icon-home.png" class="active">
+    <img src="icon-calendar.png">
+    <img src="icon-steps.png">
+    <img src="icon-book.png">
+    <img src="icon-profile.png">
+  </nav>
 </body>
 </html>
