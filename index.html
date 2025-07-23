@@ -48,6 +48,26 @@
       color: #ccc;
       margin-top: 5px;
     }
+
+    .button {
+      margin-top: 25px;
+    }
+
+    button {
+      background-color: #ffd700;
+      color: #002b5b;
+      border: none;
+      padding: 12px 24px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #ffcc00;
+    }
   </style>
 </head>
 <body>
@@ -55,6 +75,10 @@
 
   <div id="profile" class="card">
     <p>กำลังโหลดข้อมูลจาก LINE...</p>
+  </div>
+
+  <div class="button" id="confirm-btn" style="display:none;">
+    <button onclick="location.href='duduang.html'">ตกลง</button>
   </div>
 
   <script>
@@ -73,6 +97,9 @@
         <div class="name">${profile.displayName}</div>
         <div class="id">${profile.userId}</div>
       `;
+
+      // แสดงปุ่ม "ตกลง"
+      document.getElementById('confirm-btn').style.display = 'block';
     }
 
     main();
