@@ -1,39 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>โปรไฟล์ผู้ใช้ - DuDuangJeen</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>Document</title>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg" style="background-color:#9a2de2; padding: 1rem;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><span style="color: #dda400; font-weight: bold; font-size: 24px;">DuDuangJeen</span></a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="duduang.html">ดูดวง</a></li>
-          <li class="nav-item"><a class="nav-link" href="sinsae.html">ซินแส</a></li>
-          <li class="nav-item"><a class="nav-link" href="partner.html">พาร์ทเนอร์</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">สมัครสมาชิก</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="login.html">ลงชื่อเข้าใช้งาน</a></li>
-              <li><a class="dropdown-item" href="register.html">ลงทะเบียน</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <style>
     body {
       background: -webkit-linear-gradient(left, #e776f4, #ffe97c);
@@ -49,41 +23,12 @@
 
     .profile-img img {
       width: 100%;
-      max-width: 200px;
-      height: auto;
+      max-width: 180px;
+      border-radius: 50%;
     }
 
     .profile-head h5 {
       color: #333;
-    }
-
-    .profile-edit-btn {
-      border: none;
-      border-radius: 1.5rem;
-      width: 100%;
-      padding: 2%;
-      font-weight: 600;
-      color: #6c757d;
-      cursor: pointer;
-    }
-
-    .profile-work {
-      padding: 14%;
-      margin-top: -15%;
-    }
-
-    .profile-work p {
-      font-size: 12px;
-      color: #818182;
-      font-weight: 600;
-      margin-top: 10%;
-    }
-
-    .profile-work a {
-      text-decoration: none;
-      color: #495057;
-      font-weight: 600;
-      font-size: 14px;
     }
 
     .profile-tab label {
@@ -94,181 +39,51 @@
       font-weight: 600;
       color: #0062cc;
     }
-
-    .element-result {
-      margin-top: 30px;
-      padding: 20px;
-      background: #fef9f4;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .element-box {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .element-box img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      border-radius: 10px;
-    }
-
-    .element-info h4 {
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .element-info p {
-      margin: 4px 0;
-      font-size: 15px;
-    }
-
-    .life-graph-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    #life-graph {
-      width: 100%;
-      filter: blur(8px);
-    }
-
-    .lock-cover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lock-cover .lock-icon {
-      width: 60px;
-      margin-bottom: 10px;
-    }
-
-  
-
   </style>
+</head>
 
+<body>
   <div class="container emp-profile">
     <form method="post">
       <div class="row">
-        <!-- รูปโปรไฟล์ + ปุ่มอัปโหลด -->
-        <div class="col-md-4 col-12">
-          <div class="profile-img text-center">
-            <img src="image/profile.png" alt="profile" class="img-fluid mb-3" />
-            <div class="d-flex flex-column align-items-center">
-              <label for="file-upload" class="btn btn-primary btn-sm mb-2">Change Photo</label>
-              <input id="file-upload" type="file" name="file" class="form-control" style="max-width: 250px;" />
-            </div>
+        <!-- รูปโปรไฟล์ -->
+        <div class="col-md-4 text-center">
+          <div class="profile-img">
+            <img id="line-pic" src="image/profile.png" alt="รูปโปรไฟล์" />
           </div>
         </div>
 
-        <!-- ข้อมูลชื่อ และแท็บ -->
-        <div class="col-md-6 col-12">
+        <!-- ข้อมูลผู้ใช้ -->
+        <div class="col-md-6">
           <div class="profile-head">
-            <h5>ชื่อ - นามสกุล</h5>
-            <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+            <h5 id="line-name">กำลังโหลดชื่อผู้ใช้...</h5>
+            <p class="proile-rating">LINE USER</p>
+
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
-                  aria-controls="home" aria-selected="true">ข้อมูลส่วนตัว</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
-                  aria-controls="profile" aria-selected="false">กราฟชีวิต</a>
+                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab">ข้อมูลส่วนตัว</a>
               </li>
             </ul>
           </div>
         </div>
 
         <!-- ปุ่มแก้ไข -->
-        <div class="col-md-2 col-12 text-center mt-3">
-          <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
+        <div class="col-md-2 text-center mt-3">
+          <a href="register.html" class="btn btn-warning">กรอกข้อมูลเพิ่มเติม</a>
         </div>
       </div>
 
-      <div class="row">
-        <!-- ซ้าย: พื้นดวง -->
-        <div class="col-md-4 col-12">
-          <div class="profile-work">
-            <p>พื้นดวงเบื้องต้น</p>
-            <div class="element-result">
-              <a href="">ธาตุประจำตัว</a><br />
-              <div class="element-box">
-                <img src="image/Fire-Element.jpg" alt="ธาตุไฟ" class="img-fluid" />
-                <div class="element-info">
-                  <h6>ธาตุประจำตัว: ธาตุไฟ</h6>
-                </div>
-              </div>
-
-              <a href="">สีมงคลประจำธาตุ</a><br />
-              <div class="element-box">
-                <div class="element-info">
-                  <p><strong>สีมงคล:</strong> แดง, ส้ม, ชมพู</p>
-                </div>
-              </div>
-
-              <a href="">เลขมงคลประจำธาตุ</a>
-              <div class="element-box">
-                <div class="element-info">
-                  <p><strong>เลขมงคล:</strong> 3, 9</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ขวา: แท็บเนื้อหา -->
-        <div class="col-md-8 col-12">
+      <div class="row mt-4">
+        <div class="col-md-12">
           <div class="tab-content profile-tab" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-              <div class="row">
-                <div class="col-md-6 col-6"><label>ชื่อผู้ใช้</label></div>
-                <div class="col-md-6 col-6"><p>-------</p></div>
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
+              <div class="row mb-2">
+                <div class="col-md-6"><label>ชื่อผู้ใช้จาก LINE</label></div>
+                <div class="col-md-6"><p id="line-name-detail">...</p></div>
               </div>
-              <div class="row">
-                <div class="col-md-6 col-6"><label>วัน/เดือน/ปี ที่เกิด</label></div>
-                <div class="col-md-6 col-6"><p>00/00/0000</p></div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-6"><label>เวลาที่เกิด * ตามสูติบัตร</label></div>
-                <div class="col-md-6 col-6"><p>{{ birth_time }}</p></div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-6"><label>Email</label></div>
-                <div class="col-md-6 col-6"><p>DudaungJeen@gmail.com</p></div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-6"><label>Phone</label></div>
-                <div class="col-md-6 col-6"><p>123 456 7890</p></div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-6"><label>สถานที่เกิด</label></div>
-                <div class="col-md-6 col-6"><p>---------------</p></div>
-              </div>
-            </div>
-
-            <!-- กราฟชีวิต -->
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <div class="life-graph-wrapper">
-                <div id="locked-overlay" class="lock-cover">
-                  <img src="image/lock-icon.png" alt="ล็อก" class="lock-icon" />
-                  <p>กรุณาเติมเครดิตเพื่อดูกราฟชีวิตของคุณ</p>
-                </div>
-                <img id="life-graph" src="image/life graph.jpg" alt="กราฟชีวิต" />
+              <div class="row mb-2">
+                <div class="col-md-6"><label>ข้อมูลอื่น ๆ</label></div>
+                <div class="col-md-6"><p>กรอกในหน้าลงทะเบียน</p></div>
               </div>
             </div>
           </div>
@@ -277,5 +92,23 @@
     </form>
   </div>
 
+  <script>
+    async function main() {
+      await liff.init({ liffId: "https://liff.line.me/2007803528-M28zJBk3" }); // ← แก้เป็น LIFF ID ของคุณ
+
+      if (!liff.isLoggedIn()) {
+        liff.login();
+        return;
+      }
+
+      const profile = await liff.getProfile();
+      document.getElementById("line-name").innerText = profile.displayName;
+      document.getElementById("line-name-detail").innerText = profile.displayName;
+      document.getElementById("line-pic").src = profile.pictureUrl;
+    }
+
+    main();
+  </script>
 </body>
+
 </html>
