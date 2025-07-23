@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- ฟอนต์ Kalam ตาม CSS เดิม -->
-  <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
-     <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าแรก - DuDuangJeen</title>
+  <style>
     body {
       margin: 0;
       font-family: 'Sarabun', sans-serif;
@@ -24,7 +21,77 @@
       border-bottom: 1px solid #ddd;
     }
 
-    
+    .logo {
+      width: 140px;
+      margin: 0 auto 10px;
+    }
+
+    .banner img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      padding: 0 16px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .categories,
+    .gift-section,
+    .fortune-section {
+      padding: 0 16px;
+      margin-bottom: 24px;
+    }
+
+    .categories-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .category {
+      flex: 1 1 28%;
+      text-align: center;
+    }
+
+    .category img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .gift-box {
+      background: linear-gradient(to right, #f9c5d1, #fbc2eb);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 14px;
+      color: #551a8b;
+    }
+
+    .fortune-grid {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .fortune-card {
+      flex: 1;
+      min-width: 45%;
+      background-color: #eee;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .fortune-card img {
+      width: 100%;
+    }
+
+    .fortune-card p {
+      margin: 8px;
+      font-weight: bold;
+    }
 
     nav {
       position: fixed;
@@ -47,9 +114,14 @@
     }
   </style>
 </head>
+
 <body>
-    <h1>พาร์ทเนอร์</h1>
-    <nav>
+  <header>
+    <img class="logo" src="image/937B2B24-5BA5-4829-B46D-34DC7AEF0FAB.png" alt=" Logo">
+    <div>DuDuangJeen</div>
+  </header>
+
+<nav>
   <a href="duduang.html">
     <img src="image/home.png">
   </a>
@@ -67,4 +139,5 @@
   </a>
 </nav>
 </body>
+
 </html>
