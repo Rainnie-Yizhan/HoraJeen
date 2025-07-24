@@ -26,71 +26,36 @@
       margin: 0 auto 10px;
     }
 
-    .banner img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    .section-title {
-      padding: 0 16px;
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .categories,
-    .gift-section,
-    .fortune-section {
-      padding: 0 16px;
-      margin-bottom: 24px;
-    }
-
-    .categories-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .category {
-      flex: 1 1 28%;
-      text-align: center;
-    }
-
-    .category img {
-      width: 48px;
-      height: 48px;
-    }
-
-    .gift-box {
-      background: linear-gradient(to right, #f9c5d1, #fbc2eb);
+       .partner-card img {
       border-radius: 10px;
-      padding: 16px;
-      font-size: 14px;
-      color: #551a8b;
-    }
-
-    .fortune-grid {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .fortune-card {
-      flex: 1;
-      min-width: 45%;
-      background-color: #eee;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .fortune-card img {
       width: 100%;
+      object-fit: cover;
     }
-
-    .fortune-card p {
-      margin: 8px;
+    .partner-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .read-more {
+      color: #6a1b9a;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    .btn-learn {
+      display: block;
+      margin: 2rem auto;
+      background: #dda400;
+      border: none;
+      color: white;
       font-weight: bold;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-align: center;
     }
 
     nav {
@@ -120,7 +85,31 @@
     <img class="logo" src="image/937B2B24-5BA5-4829-B46D-34DC7AEF0FAB.png" alt=" Logo">
     <div>DuDuangJeen</div>
   </header>
+<div class="section-title">ร้านค้าร่วมโปรโมชัน</div>
+<div class="partner-cards" style="padding: 0 16px; display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 80px;">
+  <!-- การ์ดร้าน 1 -->
+  <div style="flex: 1 1 45%; background: #f9f9f9; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <img src="image/partner1.jpg" style="width: 100%; height: auto;" alt="partner1">
+    <div style="padding: 10px;">
+      <p style="margin: 0; font-weight: bold;">ร้านเจ๊เปิ้ลหมูกระทะ</p>
+      <a href="https://baanmaechiangmai.com/th/?gad_source=1&gad_campaignid=21160710874&gbraid=0AAAAAp7wBnZ2VRBxJmDp7ViUNcT2GzR7Q&gclid=Cj0KCQjwkILEBhDeARIsAL--pjxY4FxeYJnVXR97-50zcoAzKgaCIiF3rDBPcj0yuAfgXBHjVjKfed8aAqDOEALw_wcB" style="font-size: 13px; color: #551a8b;">READ MORE</a>
+    </div>
+  </div>
 
+  <!-- การ์ดร้าน 2 -->
+  <div style="flex: 1 1 45%; background: #f9f9f9; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <img src="image/partner2.jpg" style="width: 100%; height: auto;" alt="partner2">
+    <div style="padding: 10px;">
+      <p style="margin: 0; font-weight: bold;">โรงแรมลัคกี้พลู</p>
+      <a href="https://www.samsenvilla.com/samsenvilla-chiangmai?gad_source=1&gad_campaignid=20617837883&gbraid=0AAAAADAiY3NgVBm8aEVWJVtxopWakPEPu&gclid=Cj0KCQjwkILEBhDeARIsAL--pjxlDj3MK9doJkqVzvhQgiuZ0fJeJpV78GYkWpMkIzGgUYlhem6t5bIaAtXAEALw_wcB" style="font-size: 13px; color: #551a8b;">READ MORE</a>
+    </div>
+  </div>
+</div>
+
+<!-- ปุ่มสมัครร้าน -->
+<div style="text-align: center; margin-bottom: 100px;">
+  <a href="partner-register.html" style="background: #dda400; color: white; padding: 12px 24px; border-radius: 24px; font-weight: bold; text-decoration: none;">สมัครเข้าร่วมกับเรา</a>
+</div>
 <nav>
   <a href="duduang.html">
     <img src="image/home.png">
