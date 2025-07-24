@@ -15,13 +15,28 @@
       color: #333;
     }
 
-    header {
-      padding: 20px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 18px;
-      border-bottom: 1px solid #ddd;
-    }
+     .app-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo-small {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+.app-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+}
 
     .card {
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -66,7 +81,10 @@
 </head>
 
 <body>
-
+<header class="app-header">
+  <img class="logo-small" src="image/937B2B24-5BA5-4829-B46D-34DC7AEF0FAB.png" alt="Logo">
+  <span class="app-title">DuDuangJeen</span>
+</header>
   <div class="container mt-5">
     <div class="row g-4">
       <!-- Card หมอดู -->
