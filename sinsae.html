@@ -37,25 +37,22 @@
       color: #222;
     }
 
-    .card {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: 0.3s ease-in-out;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .btn-chat {
-      background-color: #9a2de2;
-      color: white;
-      font-weight: bold;
-    }
-
-    .btn-chat:hover {
-      background-color: #7d21b8;
-      color: #fff;
-    }
+  .small-card {
+  font-size: 13px;
+}
+.small-card img {
+  height: 80px;
+  object-fit: cover;
+}
+.btn-chat {
+  background-color: #9a2de2;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+.btn-chat:hover {
+  background-color: #7d21b8;
+}
 
     .btn-register {
       background-color: #f4b400;
@@ -97,51 +94,49 @@
   </header>
 
   <div class="container py-3">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <!-- ตัวอย่างการ์ดซินแส -->
-      <div class="col">
-        <div class="card h-100 text-center">
-          <img src="image/profile.png" class="card-img-top" alt="ซินแส">
-          <div class="card-body">
-            <h5 class="card-title text-primary">อ.พรรณษณัท</h5>
-            <p class="text-warning">รหัส 220</p>
-            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
-            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
-          </div>
-          <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">จองคิว</button>
-          </div>
+  <div class="row g-3">
+    <!-- การ์ดซินแส -->
+    <div class="col-4">
+      <div class="card text-center small-card">
+        <img src="image/profile.png" class="card-img-top" alt="ซินแส">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 text-primary">อ.วิเวก</h6>
+          <small class="text-warning d-block mb-1">รหัส 220</small>
+          <small class="text-muted">โหราศาสตร์, ไพ่ยิปซี</small>
+        </div>
+        <div class="card-footer p-2 bg-transparent">
+          <button class="btn btn-sm btn-chat w-100">แชท</button>
         </div>
       </div>
-       <div class="col">
-        <div class="card h-100 text-center">
-          <img src="image/profile.png" class="card-img-top" alt="ซินแส">
-          <div class="card-body">
-            <h5 class="card-title text-primary">อ.วิเวก</h5>
-            <p class="text-warning">รหัส 221</p>
-            <p class="card-text">ประสบการณ์กว่า 50 ปี เชี่ยวชาญฮวงจุ้ย</p>
-            <p class="text-muted small">ศาสตร์:ฮวงจุ้ย</p>
-          </div>
-          <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">จองคิว</button>
-          </div>
+    </div>
+
+    <!-- ซ้ำการ์ดได้ตามต้องการ -->
+    <div class="col-4">
+      <div class="card text-center small-card">
+        <img src="image/profile.png" class="card-img-top" alt="ซินแส">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 text-primary">อ.นิริสา</h6>
+          <small class="text-warning d-block mb-1">รหัส 221</small>
+          <small class="text-muted">ไพ่ยิปซี, วิเคราะห์ชื่อ</small>
+        </div>
+        <div class="card-footer p-2 bg-transparent">
+          <button class="btn btn-sm btn-chat w-100">แชท</button>
         </div>
       </div>
-       <div class="col">
-        <div class="card h-100 text-center">
-          <img src="image/profile.png" class="card-img-top" alt="ซินแส">
-          <div class="card-body">
-            <h5 class="card-title text-primary">อ.บาจิระ</h5>
-            <p class="text-warning">รหัส 222</p>
-            <p class="card-text">เชี่ยวชาญปาจื่อ</p>
-            <p class="text-muted small">ศาสตร์:ปาจื่อดูการตกฟาก</p>
-          </div>
-          <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">จองคิว</button>
-          </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card text-center small-card">
+        <img src="image/profile.png" class="card-img-top" alt="ซินแส">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1 text-primary">อ.วิเวียน</h6>
+          <small class="text-warning d-block mb-1">รหัส 222</small>
+          <small class="text-muted">เลข 7 ตัว 9 ฐาน</small>
+        </div>
+        <div class="card-footer p-2 bg-transparent">
+          <button class="btn btn-sm btn-chat w-100">แชท</button>
         </div>
       </div>
-      <!-- สามารถ copy การ์ดนี้เพิ่มได้ตามต้องการ -->
     </div>
 
     <!-- ปุ่มสมัครซินแส -->
