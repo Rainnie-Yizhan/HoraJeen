@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DuDuangJeen</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -15,28 +14,28 @@
       color: #333;
     }
 
-     .app-header {
-  display: flex;
-  align-items: center;
-  padding: 12px 16px;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
+    .app-header {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
-.logo-small {
-  width: 36px;
-  height: 36px;
-  margin-right: 10px;
-}
+    .logo-small {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+    }
 
-.app-title {
-  font-weight: bold;
-  font-size: 18px;
-  color: #222;
-}
+    .app-title {
+      font-weight: bold;
+      font-size: 18px;
+      color: #222;
+    }
 
     .card {
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -57,6 +56,18 @@
       background-color: #7d21b8;
       color: #fff;
     }
+
+    .btn-register {
+      background-color: #f4b400;
+      color: white;
+      font-weight: bold;
+      margin: 20px auto;
+      display: block;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+    }
+
     nav {
       position: fixed;
       bottom: 0;
@@ -76,21 +87,21 @@
     nav img.active {
       opacity: 1;
     }
-  
   </style>
 </head>
 
 <body>
-<header class="app-header">
-  <img class="logo-small" src="image/937B2B24-5BA5-4829-B46D-34DC7AEF0FAB.png" alt="Logo">
-  <span class="app-title">DuDuangJeen</span>
-</header>
-  <div class="container mt-5">
-    <div class="row g-4">
-      <!-- Card หมอดู -->
-      <div class="col-md-3 col-sm-6">
-        <div class="card h-100 shadow-sm text-center">
-          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+  <header class="app-header">
+    <img class="logo-small" src="image/937B2B24-5BA5-4829-B46D-34DC7AEF0FAB.png" alt="Logo">
+    <span class="app-title">DuDuangJeen</span>
+  </header>
+
+  <div class="container py-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <!-- ตัวอย่างการ์ดซินแส -->
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="image/profile.png" class="card-img-top" alt="ซินแส">
           <div class="card-body">
             <h5 class="card-title text-primary">อ.พรรณษณัท</h5>
             <p class="text-warning">รหัส 220</p>
@@ -98,89 +109,63 @@
             <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
           </div>
           <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">แชท</button>
+            <button class="btn btn-chat w-100">จองคิว</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="card h-100 shadow-sm text-center">
-          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
-          <div class="card-body">
-            <h5 class="card-title text-primary">อ.อรรถพล</h5>
-            <p class="text-warning">รหัส 220</p>
-            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
-            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
-          </div>
-          <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">แชท</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="card h-100 shadow-sm text-center">
-          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+       <div class="col">
+        <div class="card h-100 text-center">
+          <img src="image/profile.png" class="card-img-top" alt="ซินแส">
           <div class="card-body">
             <h5 class="card-title text-primary">อ.วิเวก</h5>
-            <p class="text-warning">รหัส 220</p>
-            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
-            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
+            <p class="text-warning">รหัส 221</p>
+            <p class="card-text">ประสบการณ์กว่า 50 ปี เชี่ยวชาญฮวงจุ้ย</p>
+            <p class="text-muted small">ศาสตร์:ฮวงจุ้ย</p>
           </div>
           <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">แชท</button>
+            <button class="btn btn-chat w-100">จองคิว</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="card h-100 shadow-sm text-center">
-          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
+       <div class="col">
+        <div class="card h-100 text-center">
+          <img src="image/profile.png" class="card-img-top" alt="ซินแส">
           <div class="card-body">
-            <h5 class="card-title text-primary">อ.นิริสา</h5>
-            <p class="text-warning">รหัส 220</p>
-            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
-            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
+            <h5 class="card-title text-primary">อ.บาจิระ</h5>
+            <p class="text-warning">รหัส 222</p>
+            <p class="card-text">เชี่ยวชาญปาจื่อ</p>
+            <p class="text-muted small">ศาสตร์:ปาจื่อดูการตกฟาก</p>
           </div>
           <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">แชท</button>
+            <button class="btn btn-chat w-100">จองคิว</button>
           </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="card h-100 shadow-sm text-center">
-          <img src="image/profile.png" class="card-img-top" alt="อ.พรรณษณัท">
-          <div class="card-body">
-            <h5 class="card-title text-primary">อ.วิเวียน</h5>
-            <p class="text-warning">รหัส 220</p>
-            <p class="card-text">ประสบการณ์กว่า 35 ปี เชี่ยวชาญเลข 7 ตัว 9 ฐาน, ไพ่ยิปซี ฯลฯ</p>
-            <p class="text-muted small">ศาสตร์: โหราศาสตร์ไทย, ไพ่ยิปซี, วิเคราะห์ชื่อ</p>
-          </div>
-          <div class="card-footer bg-transparent">
-            <button class="btn btn-chat w-100">แชท</button>
-          </div>
-        </div>
-      </div>
-      <!-- เพิ่มการ์ดอื่นๆ เหมือนกันเปลี่ยนแค่ข้อมูล -->
+      <!-- สามารถ copy การ์ดนี้เพิ่มได้ตามต้องการ -->
     </div>
+
+    <!-- ปุ่มสมัครซินแส -->
+    <a href="register_fortune.html" class="btn-register text-center">เพิ่มซินแสเข้าร่วม</a>
   </div>
-    <nav>
-      <a href="duduang.html">
-        <img src="image/home.png"   >
-      </a>
-      <a href="#">
-        <img src="image/calendar.png">
-      </a>
-      <a href="partner.html">
-        <img src="image/level-up.png" >
-      </a>
-      <a href="sinsae.html" >
-        <img src="image/booking.png"  >
-      </a>
-      <a href="profile.html" >
-        <img src="image/profile-user.png"  >
-      </a>
-    
+
+  <nav>
+    <a href="duduang.html">
+      <img src="image/home.png">
+    </a>
+    <a href="#">
+      <img src="image/calendar.png">
+    </a>
+    <a href="partner.html">
+      <img src="image/level-up.png">
+    </a>
+    <a href="sinsae.html">
+      <img src="image/booking.png">
+    </a>
+    <a href="profile.html">
+      <img src="image/profile-user.png">
+    </a>
   </nav>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
