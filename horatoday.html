@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>ดูดวงรายวัน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f9f9fb;
+            --card: #ffffff;
+            --text: #222;
+            --muted: #666;
+            --brand: #d33;
+            --radius: 16px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .appbar {
+            position: sticky;
+            top: 0;
+            background: var(--card);
+            padding: 12px 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+        }
+
+        .appbar .title {
+            font-weight: 700;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .wrap {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        }
+
+        .label {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .value {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .fortune {
+            margin-top: 8px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--card);
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+        }
+
+        .footer button {
+            background: none;
+            border: none;
+            font-size: 14px;
+            color: var(--muted);
+            cursor: pointer;
+        }
+
+        .footer button.active {
+            color: var(--brand);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="appbar">
+        <div class="title">ดูดวงรายวัน</div>
+    </header>
+
+    <main class="wrap">
+        <div class="card">
+            <div class="label">ประจำวันที่</div>
+            <div id="date" class="value">23 สิงหาคม 2568</div>
+            <div class="fortune">วันนี้คุณจะได้รับข่าวดีเกี่ยวกับงานที่รอคอยมานาน ความพยายามของคุณกำลังใกล้สำเร็จ</div>
+        </div>
+
+        <div class="card">
+            <div class="label">สีมงคล</div>
+            <div id="color" class="value">สีน้ำเงิน, สีขาว</div>
+        </div>
+
+        <div class="card">
+            <div class="label">เลขมงคล</div>
+            <div id="number" class="value">5, 9</div>
+        </div>
+
+        <div class="card">
+            <div class="label">คำทำนายโดยรวม</div>
+            <div id="fortune" class="fortune">
+                การงานราบรื่น มีโอกาสได้พบผู้ใหญ่คอยสนับสนุน<br>
+                การเงินอยู่ในเกณฑ์ดี แต่ควรระวังการใช้จ่ายฟุ่มเฟือย<br>
+                ความรักสดใส คนโสดมีเกณฑ์ได้เจอคนถูกใจ<br>
+                สุขภาพควรพักผ่อนให้เพียงพอ
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <button class="active">รายวัน</button>
+        <button>สีมงคล</button>
+        <button>ดวงอื่นๆ</button>
+    </footer>
+</body>
+
+</html>
